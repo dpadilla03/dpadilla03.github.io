@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    
+    background-size: 50%;
+    padding : 5px;
+}
+
+header > h1 {
+    color: black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+header > h2 {
+    color: black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+header > h3 {
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+body {
+    background-color: lightseagreen;
+}
+
+.bayes {
+    display: block;
+    padding : 15px;
+    width: 400px;
+    border-radius: 75px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scores {
+    width: 200px;
+    margin: 20px auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    position: relative;
+    color: black;
+}
+
+.badge {
+    padding: 10px;
+    width: 200px;
+    border-radius: 40px;
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+}
+
+
+#draws {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+}
+
+#user-disp {
+    position: absolute;
+    top: 40px;
+    left: -250px;
+}
+
+#computer-disp{
+    position: absolute;
+    top: 40px;
+    right: -250px;
+}
+
+
+.bodyinfo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.titles {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+em {
+    color: red;
+    font-style: normal;
+}
+
+.result{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.choices {
+    text-align: center;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background: lightskyblue;
+}
+
+.choice {
+    border-radius: 10%;
+    margin-top: 15px;
+    display: inline-block;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.r{
+    width: 200px;
+}
+
+.p{
+    width: 200px;
+}
+
+.s{
+    width: 200px;
+}
+
+.secret_unlock{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+    border-radius: 40px;
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    display: none;
+}
+
+.sec_exp{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    display: none;
+}
+
+.secret_unlock:hover {
+    cursor: pointer;
+    background: lightskyblue;
+}
+
+.bodyhyper {
+    background-color: aliceblue;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.largeb{
+    display: none;
+}
+
+.probs{
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    display: none;
+    margin-bottom: 35px;
+}
+
+.credits {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;    
+}
+
+.images{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.license{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}

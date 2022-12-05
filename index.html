@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a basic implementation of using bayesian inference on the classic game, Rock Paper Scissors">
+    <title>Bayesian Rock Paper Scissors!</title>
+    <link rel="stylesheet" href="stylestuff.css">
+</head>
+
+<body>
+    <header><h1>Bayesian Rock Paper Scissors!</h1></header>
+    <header><h2>Diego Emilio Padilla &nbsp; &nbsp; &nbsp; &diams; &nbsp; &nbsp; &nbsp; CS109 Challenge &nbsp; &nbsp; &nbsp; &diams; &nbsp; &nbsp; &nbsp; HTML & Styling inspired by freeCodeCamp.org</h2></header>
+    
+    <div class="bodyhyper">
+        <a href="credits.html">Credits</a>
+    </div>
+
+    <img class="bayes" src="images/Thomas-Bayes.jpg">
+    <p class="titles">I challenge YOU!</p>
+    <p class="bodyinfo">See if you can beat my bayesian Rock Paper Scissors!</p>
+    <p class="bodyinfo" id="prompt">Play 50 games! Then I shall reveal my secret...</p>
+    <p class="bodyinfo">(<em>HINT:</em> I love patterns)</p>
+    <div class="scores">
+        <div id="user-disp" class="badge">You</div>
+        <div id="computer-disp" class="badge">Thomas Bayes (Comp)</div>
+        <div id="draws" class="badge">Draw</div>
+        <span id="user-score">0</span> - <span id="computer-score">0</span>
+    </div>
+
+    <div class="result">
+        <p>-</p>
+    </div>
+
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img class="r" src="images/moai_1f5ff.png">
+        </div>
+        <div class="choice" id="paper">
+            <img class="p" src="images/1f9fb.png">
+        </div>
+        <div class="choice" id="scissors">
+            <img class="s" src="images/scissors_2702-fe0f.png">
+        </div>
+    </div>
+    
+    <div>
+        
+        <div class="secret_unlock" id="reset_button">
+            Reset
+        </div>
+        <div class="secret_unlock" id="sec_button">
+        Unlock my Secret!
+        </div>
+    </div>
+    
+    <div id="largetext1" class="largeb">
+        <header><h3>So why does my JPG image of Thomas Bayes LOVE patterns?</h3></header> 
+        <p id="pg1" class="sec_exp">
+            In short, this game's algorithm uses conditional probabilities and Bayes' theorem to 
+            calculate the probability of your next move given your previous move. How can we calculate
+            such a probability? Considering that each game generates a new piece of evidence, we can use Bayesian Inferencing!
+            Let's define events E and F, where F is the probability that your next move will be rock, and E is the probability that your previous move was scissors.
+        </p>   
+        <p class="sec_exp">
+            Recall Bayes' Theorem:
+        </p class="sec_exp">
+        <img class="bayes" src="images/bayes theorem.png">
+        
+        <p id="pg2" class="sec_exp">
+            The left term represents the probability that a player plays rock given that their previous move was scissors. We expand this using Bayes', and in doing so, have established a perfect expression to which we can apply inferencing.
+            In short, the more that a player plays, the more moves we have to go off of when calculating our probabilities. After 50 games (or more), it is only natural that we will have conditional probabilities to analyze. For example, if
+            we want to know the probability that a player's previous move was scissors given that their current move was rock, we simply (by the definition of conditional probability) count all of the times our player picked rock after scissors, over the total amount of times they picked rock.
+            We can call this our evidence (or observations), which would be the P(E | B) term. Our prior is also relatively simple.
+            Before observing a person's habits and patterns of playing certain moves after others (the P(E | B) term), our initial hypothesis is simply the rate at which they have been playing rock, paper, or scissors. This is essentially the number of times this person played that specific move over the total number of moves.
+            Without the context of these conditional probabilities, the player will have probabilities for rock, paper, and scissors, but these general probabilities do not really tell us much on their own, so they act as our priors (P(B)).  
+            P(E), or the normalization constant, is also relatively easy to track, as similar to the prior, it is just the probability of the specified move (from the player's dataset of past moves). Putting this all together, we have a pretty nifty equation in which we can track the probability of a player making any move given their previous move (a total of 9 different conditionals!). You will notice, however, after playing around with the game that some of these probabilities can have strange values (like 0). To learn why and the limitations/implementation of this approach, check out the <a href="https://www.overleaf.com/read/wckbbmkdnwry">write up</a>!
+            So all along, Thomas was keeping track of your patterns (Like P(Next = Rock | Previous = Scissors), P(Next = Rock | Previous = Rock), etc.). Patterns mean predictability, which means he wins! However, being the gracious mathmetician he is, he has decided to share them with you (use them wisely):
+        </p>
+    </div>
+
+    <div class="probs" id="bayesian_probs">
+    <div id="p_r_given_r" class="bayes_secret">Probability of playing rock given previous rock: </div>
+    <div id="p_r_given_p" class="bayes_secret">Probability of playing rock given previous paper: </div>
+    <div id="p_r_given_s" class="bayes_secret">Probability of playing rock given previous scissors: </div>
+    <div id="p_p_given_r" class="bayes_secret">Probability of playing paper given previous rock: </div>
+    <div id="p_p_given_p" class="bayes_secret">Probability of playing paper given previous paper: </div>
+    <div id="p_p_given_s" class="bayes_secret">Probability of playing paper given previous scissors: </div>
+    <div id="p_s_given_r" class="bayes_secret">Probability of playing scissors given previous rock: </div>
+    <div id="p_s_given_p" class="bayes_secret">Probability of playing scissors given previous paper: </div>
+    <div id="p_s_given_s" class="bayes_secret">Probability of playing scissors given previous scissors: </div>
+    </div>
+
+    <p class="license">Released under CC0 1.0. Spring 2022.</p>
+    
+    <script src="bayes.js" charset="utf-8"></script>
+</body>
+
+</html>
