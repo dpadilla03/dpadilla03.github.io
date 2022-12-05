@@ -59,7 +59,7 @@
         <p id="pg1" class="sec_exp">
             In short, this game's algorithm uses conditional probabilities and Bayes' theorem to 
             calculate the probability of your next move given your previous move. How can we calculate
-            such a probability? Considering that each game generates a new piece of evidence, we can use Bayesian Inferencing!
+            such a probability? Considering that each game generates a new piece of evidence, we can use Bayesian Inference!
             Let's define events E and F, where F is the probability that your next move will be rock, and E is the probability that your previous move was scissors.
         </p>   
         <p class="sec_exp">
@@ -68,7 +68,7 @@
         <img class="bayes" src="images/bayes theorem.png">
         
         <p id="pg2" class="sec_exp">
-            The left term represents the probability that a player plays rock given that their previous move was scissors. We expand this using Bayes', and in doing so, have established a perfect expression to which we can apply inferencing.
+            The left term represents the probability that a player plays rock given that their previous move was scissors. We expand this using Bayes', and in doing so, have established a perfect expression to which we can apply bayesian inference.
             In short, the more that a player plays, the more moves we have to go off of when calculating our probabilities. After 50 games (or more), it is only natural that we will have conditional probabilities to analyze. For example, if
             we want to know the probability that a player's previous move was scissors given that their current move was rock, we simply (by the definition of conditional probability) count all of the times our player picked rock after scissors, over the total amount of times they picked rock.
             We can call this our evidence (or observations), which would be the P(E | B) term. Our prior is also relatively simple.
